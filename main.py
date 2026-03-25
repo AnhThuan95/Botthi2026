@@ -1,11 +1,12 @@
 import pandas as pd
 import unicodedata
 import re
+import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, filters, ContextTypes
 
 # ====== CONFIG ======
-TOKEN = "7545340925:AAHsKxNYcWeqa_8cQandlJDnAc6fAusBXbw"
+TOKEN = os.getenv("TOKEN")
 
 # ====== HÀM XỬ LÝ TEXT ======
 def remove_accents(text):
