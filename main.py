@@ -58,7 +58,7 @@ def search(keyword):
     for w in words:
         results = results[results["normalized"].str.contains(w, na=False)]
 
-    return results.head(5)
+    return results.head(15)
 
 # ====== HANDLE MESSAGE ======
 async def handle(update: Update, context: ContextTypes.DEFAULT_TYPE):
